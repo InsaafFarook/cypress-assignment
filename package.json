@@ -1,0 +1,22 @@
+{
+  "name": "cypress-assignment",
+  "version": "1.0.0",
+  "description": "Cypress assignment using JScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InsaafFarook/cypress-assignment.git"
+  },
+  "author": "Insaaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InsaafFarook/cypress-assignment/issues"
+  },
+  "homepage": "https://github.com/InsaafFarook/cypress-assignment#readme",
+  "devDependencies": {
+    "cypress": "^9.0.0"
+  }
+}

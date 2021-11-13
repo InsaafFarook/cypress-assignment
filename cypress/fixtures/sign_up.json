@@ -1,0 +1,11 @@
+{
+  "signInSuccessData" : {
+    "name": "asdfght",
+    "email": "asdsafmhjkhg@gmail.com",
+    "password": "1qazxdr5@#"
+  },
+  "signInInvalidData" : {
+    "email": "ASDasdfxt.gmail.com"
+  }
+  
+}
