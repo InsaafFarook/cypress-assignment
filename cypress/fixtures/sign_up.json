@@ -5,7 +5,8 @@
     "password": "1qazxdr5@#"
   },
   "signInInvalidData" : {
-    "email": "ASDasdfxt.gmail.com"
+    "email": "ASDasdfxt.gmail.com",
+    "password": "qazxd"
   }
   
 }

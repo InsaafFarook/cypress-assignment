@@ -1,28 +1,30 @@
 /// <reference types="cypress" />
 
-const txtName = '#name';
-const txtWorkEmail = '#email';
-const txtPassword = '#password';
+const txtName = 'mr-form-signup-name-1';
+const txtWorkEmail = 'mr-form-signup-email-1';
+const txtPassword = 'mr-form-signup-password-1';
 const chkTerms = '#signup-terms';
 const chkSubscribe = '#signup-subscribe';
-const btnSignUp = '.signup__submit';
+const btnSignUp = 'mr-form-signup-btn-start-1';
 const lblNameError = '#nameError';
 const lblEmailError = '#emailError';
-const lblPasswordError = 'div[data-autotest-id="please-enter-your-password-1"]'
+const lblPasswordError = 'please-enter-your-password-1'
 const lblTermsError = '#termsError'
+
+const autoTest = 'mr-form-signup-name-1';
 
 export const navigateToSignUp = () => cy.visit('https://miro.com/signup/');
 
 export const isSignUpPageDisplayed = () => cy.get('.signup').should('be.visible');
 
 export const enterName = (name) => 
-  cy.get(txtName).clear().type(name);
+  cy.dataAutotestId(txtName).clear().type(name);
 
 export const enterWorkEmail = (email) => 
-  cy.get(txtWorkEmail).clear().type(email);
+  cy.dataAutotestId(txtWorkEmail).clear().type(email);
 
 export const enterPassword = (password) => 
-  cy.get(txtPassword).clear().type(password);
+  cy.dataAutotestId(txtPassword).clear().type(password);
 
 export const selectAgreeTerms = (selectCheckbox) => {
   if(selectCheckbox === true){
@@ -41,7 +43,7 @@ export const selectSubscribeNewsUpdates = (selectCheckbox) => {
 }
 
 export const clickOnGetStartedNowButton = () =>
-  cy.get(btnSignUp).click()
+  cy.dataAutotestId(btnSignUp).click()
   
 export const getNameError = () =>
   cy.get(lblNameError).invoke("text");
@@ -50,7 +52,7 @@ export const getEmailError = () =>
   cy.get(lblEmailError).invoke("text");
 
 export const getPasswordError = () =>
-  cy.get(lblPasswordError).invoke("text");
+  cy.dataAutotestId(lblPasswordError).invoke("text");
   
 export const getAgreementTermsError = () => 
   cy.get(lblTermsError).invoke("text");
