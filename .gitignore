@@ -7,5 +7,5 @@ package-lock.json
 # Cypress Test Resulst
 /cypress/videos
 /cypress/screenshots
-allure-reoprt/
+allure-report
 allure-results
