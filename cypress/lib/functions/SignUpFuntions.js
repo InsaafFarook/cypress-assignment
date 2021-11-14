@@ -2,8 +2,10 @@
 
 import * as SignUpPage from '../pages/SignUpPage';
 
+export const navigateToSignUp = (url) => 
+  SignUpPage.navigateToSignUp(url);
+
 export const signUp = (name, email, password, agreeTerms, subscribe) => {
-  SignUpPage.navigateToSignUp();
   SignUpPage.isSignUpPageDisplayed();
   SignUpPage.enterName(name);
   SignUpPage.enterWorkEmail(email);

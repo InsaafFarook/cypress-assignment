@@ -6,6 +6,12 @@ import * as EmailConfirmation from '../../lib/functions/EmailConfirmationFunctio
 
 describe('Verify Sign Up Page', () => {
 
+  const executionEnv = 'prod';
+
+  beforeEach(() => {
+    SignUp.navigateToSignUp(`sign_up_url_${executionEnv}`);
+  });
+
   it('Verify Empty Sign Up name error', () => {
     SignUp.signUp('{del}', signInSuccessData.email, signInSuccessData.password, true, false);
     SignUp.getNameError().should('eq', "Please enter your name.");

@@ -11,9 +11,7 @@ const lblEmailError = '#emailError';
 const lblPasswordError = 'please-enter-your-password-1'
 const lblTermsError = '#termsError'
 
-const autoTest = 'mr-form-signup-name-1';
-
-export const navigateToSignUp = () => cy.visit(Cypress.env('sign_up_url'));
+export const navigateToSignUp = (url) => cy.visit(Cypress.env(url));
 
 export const isSignUpPageDisplayed = () => cy.get('.signup').should('be.visible');
 
