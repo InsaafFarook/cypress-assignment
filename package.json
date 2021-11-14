@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/InsaafFarook/cypress-assignment#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.19.5",
     "cypress": "^9.0.0"
   }
 }

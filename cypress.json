@@ -1,1 +1,6 @@
-{}
+{
+  "name" : "cypress-assignment",
+  "env" : {
+    "sign_up_url" : "https://miro.com/signup/"
+  }
+}

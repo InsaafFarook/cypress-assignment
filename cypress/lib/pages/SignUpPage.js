@@ -13,7 +13,7 @@ const lblTermsError = '#termsError'
 
 const autoTest = 'mr-form-signup-name-1';
 
-export const navigateToSignUp = () => cy.visit('https://miro.com/signup/');
+export const navigateToSignUp = () => cy.visit(Cypress.env('sign_up_url'));
 
 export const isSignUpPageDisplayed = () => cy.get('.signup').should('be.visible');
 
