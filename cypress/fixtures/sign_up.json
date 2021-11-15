@@ -1,11 +1,11 @@
 {
   "signInSuccessData" : {
     "name": "Lucifer Morningstar",
-    "email": "Lucifer_M3@gmail.com",
+    "email": "Lucifer_M4@gmail.com",
     "password": "1qazxdr5@#"
   },
   "signInInvalidData" : {
-    "email": "Lucifer_M1.gmail.com",
+    "email": "Lucifer_M4.gmail.com",
     "password": "qazxd"
   }
 }
