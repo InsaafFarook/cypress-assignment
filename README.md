@@ -6,8 +6,6 @@ Cypress assignment using JScript
 2. [Structure](#Structure)
 3. [Reportins](#Reporting)
 4. [Execution](#TestExecution)
-5. [References](#References)
-
 
 # Introduction
 This repository contains **Sign Up related test scenarios** of Miro which are automated using [Cypress](https://www.cypress.io).
