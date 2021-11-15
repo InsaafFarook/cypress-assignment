@@ -3,7 +3,10 @@ Cypress assignment using JScript
 
 ## Table of Contents
 1. [Introduction](#Introduction)
-2. [Folder Structure](#Folder Structure)
+2. [Structure](#Structure)
+3. [Reportins](#Reporting)
+4. [Execution](#TestExecution)
+5. [References](#References)
 
 
 # Introduction
@@ -16,7 +19,7 @@ This repository contains **Sign Up related test scenarios** of Miro which are au
 | **Dependencies** | Cypress Allure Plugin |
 | | |
 
-# Folder Structure
+# Structure
 There are 5 main folders inside cypress folder.
 
 ## fixtures
@@ -32,9 +35,40 @@ There are 4 sub folders under lib.
   - pages : Application page specific elements and methods to be placed here.
   - utils : Utlity functions like currency conversions, date/time conversions can be placed here.
 
-## Plugins
+## plugins
 Plugins that needed to be placed here
 
-## Support
+## support
 Custom cypress commands to be placed here. Domain specific commands should not be placed here
+
+# Reporting
+Cypress-allure-plugin(https://github.com/Shelex/cypress-allure-plugin) is used for reporting. It is required to install allure plugin.
+
+Upon test execution completion allure-report folder will be generated. Open index.html with live server and it would show the test execution results in details.
+
+## Why Alluere Reporting
+  - Allure reports provide great presentational diagrams
+  - Easy to install
+  - Clear and nice reporting UI
+  - Can easily investigate test runs
+
+# Execution
+Tests can be executed with below command.
+```
+$ npm test
+```
+
+The scripts are defined in package.json.
+```
+"scripts": {
+    "cy:run" : "npx cypress run --env allure=true",
+    "allure:report" : "allure generate allure-results --clean -o allure-report",
+    "allure:clear" : "if [ -d 'allure-results' ]; then rm -Rf allure-results; fi && if [ -d 'allure-report' ]; then rm -Rf allure-report; fi && if [ -d 'cypress/screenshots' ]; then rm -Rf cypress/screenshots; fi && if [ -d 'cypress/videos' ]; then rm -Rf cypress/videos; fi",
+    "pretest": "npm run allure:clear",
+    "test" : "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure:report"  
+  }
+```
+
+allure:clear command here works with Linux, to make it work with MAC, windows please update the command as required.
 
